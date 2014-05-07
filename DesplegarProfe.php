@@ -1,8 +1,8 @@
 <?php 
 $host = "localhost";
-$usuario = "dramirez2";
-$password = "turntablepower2";
-$database = "estu_investigacion";
+$usuario = "username";
+$password = "password";
+$database = "database";
 
 $conexion = mysql_connect($host, $usuario, $password);
 mysql_select_DB($database);
@@ -10,7 +10,7 @@ mysql_select_DB($database);
 session_start();
 if(strlen($_SESSION['pass']) > 20 or strlen($_SESSION['user']) > 20)
 {
-header("location: http://ada.uprrp.edu/~dramirez2/ccom4027/project/login.html");
+header("location: http://ada.uprrp.edu/~username/ccom4027/project/login.html");
 }
 else
 {
@@ -19,11 +19,11 @@ $query_pass = mysql_query('select pass from Passwords where username = "'.$_SESS
 
 if (/*mysql_num_rows($query_pass) > 0 or*/ mysql_num_rows($query_users) > 0) // More than 1 row returned which means there is data
 {
-//header("location: http://ada.uprrp.edu/~dramirez2/ccom4027/project/investiga.php"); //ALERT!!! something typed is wrong; try again
+//header("location: http://ada.uprrp.edu/~username/ccom4027/project/investiga.php"); //ALERT!!! something typed is wrong; try again
 
 }else{ // No rows were returned therefore there were no matches
 
-header("location: http://ada.uprrp.edu/~dramirez2/ccom4027/project/login.html"); //jump to PORTADA: investiga.php
+header("location: http://ada.uprrp.edu/~username/ccom4027/project/login.html"); //jump to PORTADA: investiga.php
 }
 }
 
@@ -76,11 +76,11 @@ $row_prof = mysql_fetch_row($profID_res);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://ada.uprrp.edu/~dramirez2/ccom4027/project/investiga.php">Inicio</a>
+          <a class="navbar-brand" href="http://ada.uprrp.edu/~username/ccom4027/project/investiga.php">Inicio</a>
         </div>
 		
 		<form  class="navbar-form navbar-right" role="form">
-					<button rel="drevil" type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="left">
+					<button rel="borrando" type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="left">
 					Borrar Profesor
 					</button>
 					
@@ -101,7 +101,7 @@ $row_prof = mysql_fetch_row($profID_res);
 <?php if ($profID_res == null){
 	echo('<div class="jumbotron">
 		<div class="container">
-			<h1>El profesor o la profesora que buscas no esta en la base de datos. </h1>
+			<h1>El profesor o la profesora que buscas no existe. </h1>
 		</div>
 	</div>');
 	exit;
@@ -132,7 +132,7 @@ $row_prof = mysql_fetch_row($profID_res);
       <tbody>');
 		while($row_est = mysql_fetch_row($estu_res)){
 			echo '<tr>';
-			  echo '<td><a href="http://ada.uprrp.edu/~dramirez2/ccom4027/project/DesplegarEst.php?NumStu='.$row_est[1].'">'.$row_est[0].'</a></td>';
+			  echo '<td><a href="http://ada.uprrp.edu/~username/ccom4027/project/DesplegarEst.php?NumStu='.$row_est[1].'">'.$row_est[0].'</a></td>';
 			  echo '<td>'.$row_est[2].'</td>';
 			  echo '<td>'.$row_est[3].'</td>';
 			  echo '<td>'.$row_est[4].'</td>';
@@ -255,11 +255,11 @@ $row_prof = mysql_fetch_row($profID_res);
 	</script>
 	<script type="text/javascript">
  $(document).ready(function() {
-  $("[rel=drevil]").popover({
+  $("[rel=borrando]").popover({
       placement : 'bottom', //placement of the popover. also can use top, bottom, left or right
-      title : '<div style="text-align:center; text-decoration:underline;">&iexcl;CUIDADO!</div>', //this is the top title bar of the popover. add some basic css
+      title : '<div style="text-align:center; text-decoration:underline;">&iexcl;PRECAUCI&Oacute;N!</div>', //this is the top title bar of the popover. add some basic css
       html: 'true', //needed to show html of course
-      content : '<form action="actualizarProf.php" method="POST"><div id="popOverBox"><p>El profesor se ve a borrar de la base de datos:</p><input type="hidden" value="<?php echo $prof_id?>" name="ProfeID"><button type="submit" value="DELETE" name="deleteProf" class="btn btn-danger" >Borrar </button></div></form>' //this is the content of the html box. add the image here or anything you want really.
+      content : '<form action="actualizarProf.php" method="POST"><div id="popOverBox"><p>El profesor ser&aacute; eliminado.</p><input type="hidden" value="<?php echo $prof_id?>" name="ProfeID"><button type="submit" value="DELETE" name="deleteProf" class="btn btn-danger" >Borrar </button></div></form>' //this is the content of the html box. add the image here or anything you want really.
 });
 });
 </script>
