@@ -4,9 +4,9 @@
 //select inv_id from Investigacion where titulo="" and descripcion=""
 
 $host = "localhost";
-$usuario = "dramirez2";
-$password = "turntablepower2";
-$database = "estu_investigacion";
+$usuario = "username";
+$password = "password";
+$database = "database";
 
 $conexion = mysql_connect($host, $usuario, $password);
 mysql_select_DB($database);
