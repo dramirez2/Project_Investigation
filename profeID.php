@@ -1,7 +1,7 @@
 <?php 
 $host = "localhost";
 $usuario = "dramirez2";
-passw = "turntablepower2";
+$passw = "turntablepower2";
 $estu_investigacion = "estu_investigacion";
 
 session_start();

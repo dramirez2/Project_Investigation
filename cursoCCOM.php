@@ -2,10 +2,10 @@
 <?php 
 $host = "localhost";
 $usuario = "dramirez2";
-passw = "turntablepower2";
+$passw = "turntablepower2";
 $estu_investigacion = "estu_investigacion";
 
-$conexion = mysql_connect($host, $usuario, passw);
+$conexion = mysql_connect($host, $usuario, $passw);
 mysql_select_DB($estu_investigacion);
 
 session_start();
