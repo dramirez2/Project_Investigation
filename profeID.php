@@ -1,8 +1,8 @@
 <?php 
 $host = "localhost";
-$usuario = "username";
-$password = "password";
-$database = "database";
+$usuario = "dramirez2";
+$password = "turntablepower2";
+$database = "estu_investigacion";
 
 session_start();
 if(strlen($_SESSION['pass']) > 20 or strlen($_SESSION['user']) > 20)
