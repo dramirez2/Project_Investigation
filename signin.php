@@ -16,8 +16,8 @@ if(strlen($_SESSION['pass']) > 20 or strlen($_SESSION['user']) > 20)
 }
 else
 {
-$query_users = mysql_query('select username from passwords where pass = "'.$_SESSION['pass'].'"');
-$query_pass = mysql_query('select pass from passwords where username = "'.$_SESSION['user'].'"'); // using client input as variable for a query: asking to be hacked.
+$query_users = mysql_query('select username from Passwords where pass = "'.$_SESSION['pass'].'"');
+$query_pass = mysql_query('select pass from Passwords where username = "'.$_SESSION['user'].'"'); // using client input as variable for a query: asking to be hacked.
 
 if (/*mysql_num_rows($query_pass) > 0 or*/ mysql_num_rows($query_users) > 0) // More than 1 row returned which means there is data
 {

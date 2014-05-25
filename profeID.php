@@ -1,7 +1,7 @@
 <?php 
 $host = "localhost";
 $usuario = "dramirez2";
-$turntablepower2 = "turntablepower2";
+passw = "turntablepower2";
 $estu_investigacion = "estu_investigacion";
 
 session_start();
@@ -11,8 +11,8 @@ header("location: http://ada.uprrp.edu/~dramirez2/ccom4027/project/login.html");
 }
 else
 {
-$query_users = mysql_query('select username from passwords where pass = "'.$_SESSION['pass'].'"');
-$query_pass = mysql_query('select pass from passwords where username = "'.$_SESSION['user'].'"'); // using client input as variable for a query: asking to be hacked.
+$query_users = mysql_query('select username from Passwords where pass = "'.$_SESSION['pass'].'"');
+$query_pass = mysql_query('select pass from Passwords where username = "'.$_SESSION['user'].'"'); // using client input as variable for a query: asking to be hacked.
 
 if (/*mysql_num_rows($query_pass) > 0 or*/ mysql_num_rows($query_users) > 0) // More than 1 row returned which means there is data
 {
@@ -24,7 +24,7 @@ header("location: http://ada.uprrp.edu/~dramirez2/ccom4027/project/login.html");
 }
 }
 
-$conexion = mysql_connect($host, $usuario, $turntablepower2);
+$conexion = mysql_connect($host, $usuario, passw);
 mysql_select_DB($estu_investigacion);
 //En este archivo hay que enviar el id del profe de alguna manera
 $id_to_pass = $_POST['NumStu'];
