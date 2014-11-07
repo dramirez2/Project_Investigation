@@ -1,8 +1,8 @@
 <?php 
 $host = "localhost";
-$usuario = "dramirez2";
-$passw = "turntablepower2";
-$estu_investigacion = "estu_investigacion";
+$usuario = "username";
+$passw = "password";
+$estu_investigacion = "database";
 
 $conexion = mysql_connect($host, $usuario, $passw);
 mysql_select_DB($estu_investigacion);
@@ -172,7 +172,7 @@ $nombre_res= mysql_query($sql_nombres); //no devuelve el valor, es un pointer
                     <input type="text" class="form-control" placeholder="Tel&eacute;fono" name="ModTStu">
                   </div>
 
-                  <!-- Año box -->
+                  <!-- AÃ±o box -->
                   <div class="row" id="input-pass"> 
                     <input type="text" class="form-control" placeholder="A&ntilde;o" name="ModAStu">
                   </div>
