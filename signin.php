@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$usuario = "dramirez2";
-$pass = "turntablepower2";
-$estu_investigacion = "estu_investigacion";
+$usuario = "username";
+$passw = "password";
+$estu_investigacion = "database";
 
 $conexion = mysql_connect($host, $usuario, $pass);
 mysql_select_DB($estu_investigacion);
