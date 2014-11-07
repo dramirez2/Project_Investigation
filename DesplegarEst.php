@@ -1,8 +1,8 @@
 <?php 
 $host = "localhost";
-$usuario = "dramirez2";
-$passw = "turntablepower2";
-$estu_investigacion = "estu_investigacion";
+$usuario = "username";
+$passw = "password";
+$estu_investigacion = "database";
 
 $conexion = mysql_connect($host, $usuario, $passw);
 mysql_select_DB($estu_investigacion);
@@ -274,7 +274,7 @@ $row_id = mysql_fetch_row($id_res);
                     <input type="text" class="form-control" placeholder="Tel&eacute;fono" name="EstT">
                   </div>
 
-                  <!-- Año box -->
+                  <!-- AÃ±o box -->
                   <div class="row" id="input-pass"> 
                     <input type="text" class="form-control" placeholder="A&ntilde;o" name="EstA">
                   </div>
@@ -425,7 +425,7 @@ $row_id = mysql_fetch_row($id_res);
                          <div class="row" id="input-pass"> 
                            <input type="text" class="form-control" placeholder="Correo electr&oacute;nico del aconsejador" name="profEm">
                          </div>
-						 <!-- Año box  -->
+						 <!-- AÃ±o box  -->
                          <div class="row" id="input-pass" >
                             <input type="text" class="form-control"  placeholder="A&ntilde;os en la Investigaci&oacute;n" name="InvYear">
                          </div>
@@ -439,7 +439,7 @@ $row_id = mysql_fetch_row($id_res);
                            <input type="text" id="InvProd" style="visibility: visible;" class="form-control" placeholder="Producto de la Investigaci&oacute;n" name="InvProd"> 
                          </div>
 						 <input type="hidden" value="<?php echo $numEst;?>" name="NumEstu">
-                         <!-- Compañeros Inv box 
+                         <!-- CompaÃ±eros Inv box 
                          <div class="row" id="input-pass"> 
                            <input type="text" class="form-control" placeholder="Compa&ntilde;eros de la Investigaci&oacute;n" name="">
                          </div> -->
